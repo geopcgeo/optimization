@@ -2,8 +2,6 @@
 
 #Replace the location of your .htaccess file in $htaccess_loc
 
-$htaccess_loc="/var/www/html/edge.devl.medigy.com/medigy-drupal/public_site/.htaccess"
-
 #necessary defaults
 Exec {
    path => ["/bin", "/sbin", "/usr/bin", "/usr/sbin"],
