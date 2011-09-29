@@ -78,7 +78,8 @@ class optimize::apc {
 		}
 		
 class optimize {
-				include optimize::apache, optimize::gzip, optimize::apc
+				include optimize::apache, optimize::gzip
+				include optimize::apc
 		}
 		
 		
