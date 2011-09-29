@@ -11,9 +11,10 @@ class optimize::apache	{
 				file { "httpd.conf":
 					path    => "${apache::params::configfile}",
 					require => Service["apache"],
-					exec "changing-parameters":
+					exec {"changing-parameters":
 					command =>"/etc/puppet/modules/optimize/scripts/centos_change_apache_parameters.sh",
 					logoutput => true,
+						}
 					mode    => "${apache::params::configfile_mode}",
 					owner   => "${apache::params::configfile_owner}",
 					group  => "${apache::params::configfile_group}",
@@ -28,9 +29,10 @@ class optimize::apache	{
 				file { "apache2.conf":
 					path    => "${apache::params::configfile}",
 					require => Service["apache"],
-					exec "changing-parameters":
+					exec { "changing-parameters":
 					command =>"/etc/puppet/modules/optimize/scripts/ubuntu_change_apache_parameters.sh",
 					logoutput => true,
+						}
 					mode    => "${apache::params::configfile_mode}",
 					owner   => "${apache::params::configfile_owner}",
 					group  => "${apache::params::configfile_group}",
@@ -44,9 +46,10 @@ class optimize::apache	{
 				file { "apache2.conf":
 					path    => "${apache::params::configfile}",
 					require => Service["apache"],
-					exec "changing-parameters":
+					exec { "changing-parameters":
 					command =>"/etc/puppet/modules/optimize/scripts/ubuntu_change_apache_parameters.sh",
 					logoutput => true,
+						}
 					mode    => "${apache::params::configfile_mode}",
 					owner   => "${apache::params::configfile_owner}",
 					group  => "${apache::params::configfile_group}",
