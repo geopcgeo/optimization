@@ -1,0 +1,6 @@
+<ifModule mod_deflate.c>
+Addtype font/opentype .otf
+Addtype font/eot .eot
+Addtype font/truetype .ttf
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript font/opentype font/truetype font/eot
+</ifModule>

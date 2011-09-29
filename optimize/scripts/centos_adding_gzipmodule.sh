@@ -1,0 +1,1 @@
+#!/bin/sh#This will enable GZIP.htaccess_loc=$1echo $htaccess_loccat /etc/puppet/modules/optimize/files/adding_gzipmodule.txt >> $htaccess_loc/etc/init.d/httpd restartecho "Enabled GZIP for better performance."
