@@ -58,13 +58,13 @@ class optimize::apc {
 			case $operatingsystem  {
 				debian:	{
 					exec { "adding-apc":
-					command =>"/etc/puppet/modules/optimize/scripts/centos_apc.sh",
+					command =>"/etc/puppet/modules/optimize/scripts/ubuntu_apc.sh",
 					logoutput => true,
 					}
 					}
 				ubuntu:	{
 					exec { "adding-apc":
-					command =>"/etc/puppet/modules/optimize/scripts/centos_apc.sh",
+					command =>"/etc/puppet/modules/optimize/scripts/ubuntu_apc.sh",
 					logoutput => true,
 					}
 					}
