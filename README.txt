@@ -1,5 +1,6 @@
 This contains generalized puppet script for Apache Optimization, enabling of GZIP, installation and fine tuning of PHP Accelerator APC.
 ***************************************************************************************************************************************
+This Puppet Script for tuning Alim Server
 
 Server Configuration Management Setup
 =====================================
@@ -25,12 +26,7 @@ ln -s /$HOME/operations/configuration/server/puppet/modules/optimize /etc/puppet
 mkdir /etc/puppet/manifests
 cp /etc/puppet/modules/nodes.pp /etc/puppet/manifests/
 sudo chmod 755 /etc/puppet/modules/optimize/scripts/*
-# Add the location of your .htaccess in your nodes.pp
 puppet -v /etc/puppet/manifests/nodes.pp
-# Copy the apc.php file to your web root location. 
-# For Medigy Server it is:
-cp /usr/share/pear/apc.php /var/www/html/edge.devl.medigy.com/medigy-drupal/public_site/
-
 
 
 
@@ -56,10 +52,4 @@ sudo git clone git@github.com:netspective/operations.git
 sudo ln -s /$HOME/operations/configuration/server/puppet/modules/optimize /etc/puppet/modules
 sudo cp /etc/puppet/modules/nodes.pp /etc/puppet/manifests/
 sudo chmod 755 /etc/puppet/modules/optimize/scripts/*
-# Add the location of your .htaccess in your nodes.pp
 sudo puppet -v /etc/puppet/manifests/nodes.pp
-# Copy the apc.php file to your web root location. 
-# For Alim Server it is:
-sudo /usr/share/php/apc.php /var/www/www.alim.org/
-
-

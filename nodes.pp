@@ -1,6 +1,5 @@
 # The following are the settings variables required for the operations. Assign appropriate values
 
-#Replace the location of your .htaccess file in $htaccess_loc
 
 #necessary defaults
 Exec {
